@@ -1,0 +1,24 @@
+{
+  "name": "my-project",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@fiad/vite-plugin-twig": "^0.0.3",
+    "@vitejs/plugin-legacy": "^1.6.4",
+    "sass": "^1.45.2",
+    "vite": "^2.7.2"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "@fiad/stitchery": "^1.2.0",
+    "@fiad/toolbox": "^2.2.5",
+    "gsap": "^3.9.1",
+    "sass-mq": "^5.0.1",
+    "the-new-css-reset": "^1.4.4"
+  }
+}

@@ -1,0 +1,22 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
+  <style>
+    .c-1 { fill: #F8F8F8 }
+    .c-2 { fill: #F1F1F1 }
+    .c-3 { fill: #FBFBFB }
+    @media (prefers-color-scheme: dark) {
+      .c-1 { fill: #2C2C2C }
+      .c-2 { fill: #252525 }
+      .c-3 { fill: #2F2F2F }
+    }
+  </style>
+  <polygon class="c-1" points="0,213.3 256,341.3 256,426.7 0,298.7" />
+  <polygon class="c-1" points="256,170.7 426.7,256 512,213.3 256,85.3" />
+  <polygon class="c-2" points="256,170.7 85.3,256 0,213.3 256,85.3" />
+  <polygon class="c-2" points="426.7,426.7 341.3,384 341.3,128 426.7,85.3" />
+  <polygon class="c-3" points="512,213.3 256,341.3 256,426.7 512,298.7" />
+  <g>
+    <polygon fill="#4F5D75" points="85.3,85.4 170.7,128 170.7,384 85.3,426.7" />
+    <polygon fill="#81A684" points="85.3,85.3 170.7,128 256,85.3 341.3,128 426.7,85.3 256,0" />
+    <polygon fill="#EF8354" points="426.7,426.7 341.3,384 256,426.7 170.7,384 85.3,426.7 256,512" />
+  </g>
+</svg>

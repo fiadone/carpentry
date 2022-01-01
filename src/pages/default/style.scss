@@ -1,0 +1,12 @@
+@import '~/library/components/header';
+@import '~/library/components/footer';
+
+.page {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+
+  main {
+    flex-grow: 1;
+  }
+}

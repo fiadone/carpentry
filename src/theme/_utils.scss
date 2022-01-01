@@ -1,0 +1,19 @@
+@import '@fiad/stitchery';
+@import 'sass-mq/mq';
+
+@mixin font-face($name, $weight: 'normal', $style: 'normal', $display: 'swap') {
+  @font-face {
+    font-family: $name;
+    src: url('#{$assets}/fonts/#{$name}/#{$name}.woff') format('woff'),
+         url('#{$assets}/fonts/#{$name}/#{$name}.ttf') format('truetype'),
+         url('#{$assets}/fonts/#{$name}/#{$name}.svg##{$name}') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: $display;
+  }
+}
+
+@mixin off-container {
+  width: 100vw;
+  left: calc((100% - 100vw) / 2);
+}

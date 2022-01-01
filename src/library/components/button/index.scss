@@ -1,0 +1,71 @@
+.button {
+  display: inline-flex;
+  padding: rem(12px);
+  align-items: center;
+  background-color: transparent;
+  border: solid 2px $tertiary;
+  border-radius: rem($radius);
+  font-size: rem(12px);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: rem(16px);
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: $default-duration;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (pointer: fine) {
+    &:hover {
+      background-color: $tertiary;
+      color: $white;
+    }
+  }
+
+  & > *:nth-child(n+2) {
+    margin-left: rem(8px);
+  }
+}
+
+.button--primary {
+  background-color: $primary;
+  border-color: $primary;
+  color: $white;
+
+  @media (pointer: fine) {
+    &:hover {
+      background-color: transparent;
+      color: $primary;
+    }
+  }
+}
+
+.button--secondary {
+  background-color: $secondary;
+  border-color: $secondary;
+  color: $white;
+
+  @media (pointer: fine) {
+    &:hover {
+      background-color: transparent;
+      color: $secondary;
+    }
+  }
+}
+
+.button--reverse {
+  flex-direction: row-reverse;
+
+  & > *:nth-child(n+2) {
+    margin-right: rem(8px);
+    margin-left: 0;
+  }
+}
+
+.button__icon {
+  font-size: 1.5em;
+}
+
+.button__label {
+  flex-grow: 1;
+  text-align: center;
+}

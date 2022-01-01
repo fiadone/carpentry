@@ -1,0 +1,33 @@
+@include font-face('icons');
+
+$glyphs: (
+  'github': \f09b
+);
+
+.icon {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  justify-content: center;
+  align-items: center;
+
+  & > i {
+    font-family: $icon-font;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+  }
+
+  & > svg {
+    height: 1em;
+    fill: currentColor;
+  }
+}
+
+@each $key, $value in $glyphs {
+  .icon > i[data-glyph="#{$key}"]::before {
+    content: "#{$value}";
+  }
+}

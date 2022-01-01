@@ -1,0 +1,63 @@
+html {
+  font-size: 100%;
+  @include auto-scaling;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+}
+
+.container {
+  width: 100%;
+  max-width: rem($container-maxwidth);
+  padding: 0 rem($container-padding);
+  position: relative;
+  margin: 0 auto;
+}
+
+*[class*="flex"] {
+  display: flex;
+
+  @each $key, $value in ('row': row, 'col': column) {
+    &.flex\:#{$key} {
+      flex-direction: $value;
+    }
+
+    &.flex\:#{$key}-reverse {
+      flex-direction: #{$value}-reverse;
+    }
+  }
+
+  @each $key, $value in (
+    'start': flex-start,
+    'center': center,
+    'end': flex-end,
+    'between': space-between,
+    'around': space-around,
+    'evenly': space-evenly
+  ) {
+    &.justify\:#{$key} {
+      justify-content: $value;
+    }
+  }
+
+  @each $key, $value in (
+    'start': flex-start,
+    'center': center,
+    'stretch': stretch,
+    'end': flex-end
+  ) {
+    &.align\:#{$key} {
+      align-items: $value;
+    }
+
+    & > *.align\:#{$key} {
+      align-self: $value;
+    }
+  }
+}
+
+@include grid(12, #{rem($grid-gutter)});
