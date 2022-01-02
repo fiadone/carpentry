@@ -3,11 +3,13 @@
 {% block header %}{% endblock %}
 
 {% block content %}
-  <div class="container">
-    <img width="128" src="{{ assetsPath }}/static/images/logo.svg" alt="@fiad/carpentry">
-    <h1>{{ title }}</h1>
-    <h4>{{ subtitle }}</h4>
-    <p>{{ abstract|raw }}</p>
-    {% include '../../library/components/button/template.twig' with cta only %}
+  <div class="row">
+    <div class="col">
+      <img width="128" src="{{ assetsPath }}/static/images/logo.svg" alt="@fiad/carpentry">
+      <h1>{{ title }}</h1>
+      <h4>{{ subtitle }}</h4>
+      <p>{{ abstract|raw }}</p>
+      {% include '../../library/components/button/template.twig' with button only %}
+    </div>
   </div>
 {% endblock %}

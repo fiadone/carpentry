@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
-import legacy from '@vitejs/plugin-legacy'
 import twig from '@fiad/vite-plugin-twig'
+import { filters, functions } from '@fiad/twig-addons'
 
 export default defineConfig({
   resolve: {
@@ -25,11 +25,12 @@ export default defineConfig({
   },
   plugins: [
     twig({
+      filters,
+      functions,
       globals: {
         assetsPath: '/src',
         publicPath: ''
       }
-    }),
-    legacy({ targets: ['defaults', 'not IE 11'] })
+    })
   ]
 })
