@@ -1,15 +1,15 @@
-{% extends '../default/template.twig' %}
+{% extends 'pages/default/template.twig' %}
 
 {% block header %}{% endblock %}
 
 {% block content %}
   <div class="row">
     <div class="col">
-      <img width="128" src="{{ assetsPath }}/static/images/logo.svg" alt="@fiad/carpentry">
+      <img width="128" src="{{ sourcePath }}/assets/images/logo.svg" alt="@fiad/carpentry">
       <h1>{{ title }}</h1>
       <h4>{{ subtitle }}</h4>
       <p>{{ abstract|raw }}</p>
-      {% include '../../library/components/button/template.twig' with button only %}
+      {% include 'library/components/button/template.twig' with button only %}
     </div>
   </div>
 {% endblock %}

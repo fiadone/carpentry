@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@fiad/twig-addons": "^1.3.0",
-    "@fiad/vite-plugin-twig": "^0.0.3",
+    "@fiad/vite-plugin-twig": "^0.0.6",
     "sass": "^1.45.2",
     "vite": "^2.7.2"
   },

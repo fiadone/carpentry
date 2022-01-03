@@ -1,6 +1,7 @@
-import { defineConfig } from 'vite'
+import path from 'path'
 import twig from '@fiad/vite-plugin-twig'
 import { filters, functions } from '@fiad/twig-addons'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   resolve: {
@@ -28,8 +29,12 @@ export default defineConfig({
       filters,
       functions,
       globals: {
-        assetsPath: '/src',
-        publicPath: ''
+        publicPath: '',
+        sourcePath: '/src',
+        currentYear: new Date().getFullYear()
+      },
+      settings: {
+        views: path.resolve(__dirname, 'src')
       }
     })
   ]

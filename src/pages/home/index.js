@@ -1,4 +1,4 @@
-import './style.scss'
+import './style'
 import DefaultPage from '../default'
 
 class HomePage extends DefaultPage {

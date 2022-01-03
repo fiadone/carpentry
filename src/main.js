@@ -1,6 +1,6 @@
-import barba from '@barba/core'
-import pages from '~/pages'
 import '~/theme'
+import pages from '~/pages'
+import barba from '@barba/core'
 
 let currentPage
 

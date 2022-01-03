@@ -6,7 +6,7 @@
     {% block meta %}
       <title>{{ title }}</title>
     {% endblock %}
-    <link type="image/svg+xml" rel="icon" href="{{ assetsPath }}/static/images/favicon.svg">
+    <link type="image/svg+xml" rel="icon" href="{{ sourcePath }}/assets/images/favicon.svg">
     <link type="text/plain" rel="author" href="{{ publicPath }}/humans.txt" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,6 @@
       </main>
       {% block footer %}{% endblock %}
     </div>
-    <script type="module" src="{{ assetsPath }}/main.js"></script>
+    <script type="module" src="{{ sourcePath }}/main.js"></script>
   </body>
 </html>
