@@ -1,7 +1,7 @@
 import path from 'path'
-import twig from '@fiad/vite-plugin-twig'
-import { filters, functions } from '@fiad/twig-addons'
 import { defineConfig } from 'vite'
+import twig from 'vite-plugin-twig'
+import { filters, functions } from '@fiad/twig-addons'
 
 export default defineConfig({
   resolve: {
