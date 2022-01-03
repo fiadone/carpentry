@@ -15,7 +15,7 @@ export default defineConfig({
       scss: {
         additionalData: '@import "~/theme/core";'
       }
-    },
+    }
   },
   build: {
     rollupOptions: {
