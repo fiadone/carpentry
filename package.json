@@ -18,7 +18,7 @@
   "dependencies": {
     "@barba/core": "^2.9.7",
     "@fiad/stitchery": "^1.2.0",
-    "@fiad/toolbox": "^2.2.5",
+    "@fiad/toolbox": "^2.3.0",
     "gsap": "^3.9.1",
     "sass-mq": "^5.0.1",
     "the-new-css-reset": "^1.4.4"
