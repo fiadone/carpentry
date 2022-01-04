@@ -1,13 +1,45 @@
-{% extends 'pages/base.twig' %}
-
-{% block header %}
-  {% include 'library/components/header/template.twig' %}
-{% endblock %}
-{% block content %}
-  <div class="container">
-    <h1>{{ title }}</h1>
-  </div>
-{% endblock %}
-{% block footer %}
-  {% include 'library/components/footer/template.twig' %}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="{{ lang|default('en') }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta %}
+      {% set meta = meta|default({})|merge({ og: meta.og|default({}) }) %}
+      <title>{{ meta.title }}</title>
+      <meta name="description" content="{{ meta.description }}">
+      <meta property="og:type" content="{{ meta.og.type|default('website') }}">
+      <meta property="og:title" content="{{ meta.og.title|default(meta.title) }}">
+      <meta property="og:description" content="{{ meta.og.description|default(meta.description) }}">
+      <meta property="og:image" content="{{ meta.og.image }}">
+    {% endblock %}
+    <link type="image/svg+xml" rel="icon" href="{{ sourcePath }}/assets/images/favicon.svg">
+    <link type="text/plain" rel="author" href="{{ publicPath }}/humans.txt">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body data-barba="wrapper" style="opacity: 0">
+    <div
+      id="{{ namespace }}"
+      class="page"
+      data-barba="container"
+      data-barba-namespace="{{ namespace }}"
+      data-smooth-scroll
+    >
+      {% block header %}
+        {% include './components/header/template.twig' %}
+      {% endblock %}
+      <main class="content">
+        {% block content %}
+          <div class="container">
+            <h1 data-reveal>{{ title }}</h1>
+          </div>
+        {% endblock %}
+      </main>
+      {% block footer %}
+        {% include './components/footer/template.twig' %}
+      {% endblock %}
+    </div>
+    <script type="module" src="{{ sourcePath }}/main.js"></script>
+  </body>
+</html>

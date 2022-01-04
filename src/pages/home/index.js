@@ -1,8 +1,6 @@
-import './style'
 import DefaultPage from '../default'
+import './style'
 
-class HomePage extends DefaultPage {
-  
-}
+class HomePage extends DefaultPage {}
 
 export default HomePage

@@ -60,4 +60,8 @@ body {
   }
 }
 
+[data-reveal] {
+  opacity: 0;
+}
+
 @include grid(12, #{rem($grid-gutter)});

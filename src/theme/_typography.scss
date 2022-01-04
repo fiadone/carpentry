@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, strong {
   font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.25em;
 }
 
@@ -26,12 +26,12 @@ h1, h2, h3, h4, h5, h6, p {
   $max: 48px;
   $min: 16px;
 
-  h#{$i} {
+  h#{$i}, .h#{$i} {
     font-size: rem($max - calc(($max - $min) / 5 * ($i - 1)));
   }
 }
 
-p {
+p, .p {
   line-height: 1.5;
 }
 

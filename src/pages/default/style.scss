@@ -1,5 +1,5 @@
-@import '~/library/components/header';
-@import '~/library/components/footer';
+@import './components/header';
+@import './components/footer';
 
 .page {
   display: flex;
