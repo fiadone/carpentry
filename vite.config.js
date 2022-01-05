@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import twig from 'vite-plugin-twig'
+import purgecss from '@fullhuman/postcss-purgecss'
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   resolve: {
     extensions: ['.js', '.json', '.css', '.scss'],
     alias: {
@@ -13,7 +14,18 @@ export default defineConfig({
       scss: {
         additionalData: '@import "~/theme/core";'
       }
-    }
+    },
+    ...(command !== 'build')
+      ? null
+      : {
+        postcss: {
+          plugins: [
+            purgecss({
+              content: ['./**/*.html', './src/**/*.twig']
+            })
+          ]
+        }
+      }
   },
   build: {
     rollupOptions: {
@@ -25,4 +37,4 @@ export default defineConfig({
   plugins: [
     twig()
   ]
-})
+}))
