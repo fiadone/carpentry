@@ -33,15 +33,15 @@ Take a look to [Vite documentation](https://vitejs.dev/) to learn more.
 
 ## Main features
 
-### Twig templates
+### Twig template engine
 The usage of template engines is very common in backend frameworks (like *Laravel* or *Symfony*), but is extremely useful in static sites development too. This boilerplate offers a ready-made integration of *Twig*, so you can prevent markup redundancy by splitting and reusing your templates and partials.
 
 Take a look to [vite-plugin-twig](https://github.com/fiadone/vite-plugin-twig) to learn more.
 
-### SCSS and vanilla JS utilities
+### Built-in SCSS and vanilla JS utilities
 Since there is no front-end framework involved here, this boilerplate comes with some "old but gold" *SCSS* and *vanilla JS* utilities out of the box.
 
 Take a look to [@fiad/stitchery](https://github.com/fiadone/stitchery) and [@fiad/toolbox](https://github.com/fiadone/toolbox) to learn more.
 
-### Pre-structured page transitions
+### Pre-structured router with page lazy loading and transitions
 Take a look to [barba.js](https://barba.js.org/) to learn more.
