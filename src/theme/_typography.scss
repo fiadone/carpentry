@@ -1,7 +1,8 @@
-   
-html {
+body {
   font-family: $default-font;
+  font-size: 1rem;
   font-variant-ligatures: none;
+  line-height: 1;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: none;
@@ -9,17 +10,14 @@ html {
   color: $tertiary;
 }
 
-body {
-  font-size: 1rem;
-  line-height: 1;
-}
-
-h1, h2, h3, h4, h5, h6, strong {
-  font-weight: bold;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   margin-bottom: 0.25em;
+  font-weight: bold;
 }
 
 @for $i from 1 through 6 {
@@ -33,6 +31,10 @@ h1, h2, h3, h4, h5, h6 {
 
 p, .p {
   line-height: 1.5;
+}
+
+strong {
+  font-weight: bold;
 }
 
 em {
