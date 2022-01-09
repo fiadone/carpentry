@@ -1,32 +1,8 @@
 import { defineConfig } from 'vite'
-import twig from 'vite-plugin-twig'
 import purgecss from '@fullhuman/postcss-purgecss'
+import twig from 'vite-plugin-twig'
 
 export default defineConfig(({ command }) => ({
-  resolve: {
-    extensions: ['.js', '.json', '.css', '.scss'],
-    alias: {
-      '~': '/src'
-    }
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '@import "~/theme/core";'
-      }
-    },
-    ...(command !== 'build')
-      ? null
-      : {
-        postcss: {
-          plugins: [
-            purgecss({
-              content: ['./**/*.html', './src/**/*.twig']
-            })
-          ]
-        }
-      }
-  },
   build: {
     rollupOptions: {
       input: {
@@ -34,7 +10,27 @@ export default defineConfig(({ command }) => ({
       }
     }
   },
+  css: {
+    postcss: {
+      plugins: (command !== 'build') ? [] : [
+        purgecss({
+          content: ['./**/*.html', './src/**/*.twig']
+        })
+      ]
+    },
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "~/theme/core";'
+      }
+    }
+  },
   plugins: [
     twig()
-  ]
+  ],
+  resolve: {
+    extensions: ['.js', '.json', '.css', '.scss'],
+    alias: {
+      '~': '/src'
+    }
+  }
 }))
