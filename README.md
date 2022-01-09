@@ -1,4 +1,4 @@
-# @fiad/carpentry
+# Carpentry
 
 A nostalgic but modern front-end boilerplate
 
@@ -11,7 +11,7 @@ It also comes along with built-in additional utilities and basic configurations 
 
 ## Get started
 ```sh
-npx degit fiadone/carpentry my-project
+npm init @fiad/carpentry my-project
 
 cd my-project
 
