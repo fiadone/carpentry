@@ -1,4 +1,3 @@
-const path = require('path')
 const twigAddons = require('@fiad/twig-addons')
 
 module.exports = {
@@ -10,6 +9,6 @@ module.exports = {
     currentYear: new Date().getFullYear()
   },
   settings: {
-    views: path.resolve(__dirname, 'src')
+    views: 'src'
   }
 }

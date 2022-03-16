@@ -17,29 +17,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    {% block head %}{% endblock %}
   </head>
-  <body data-barba="wrapper" style="opacity: 0">
-    <div
-      id="{{ namespace }}"
-      class="page"
-      data-barba="container"
-      data-barba-namespace="{{ namespace }}"
-      data-smooth-scroll
-    >
-      {% block header %}
-        {% include './components/header/template.twig' %}
-      {% endblock %}
-      <main class="content">
-        {% block content %}
-          <div class="container">
-            <h1 data-reveal>{{ title }}</h1>
-          </div>
-        {% endblock %}
-      </main>
-      {% block footer %}
-        {% include './components/footer/template.twig' %}
-      {% endblock %}
-    </div>
+  <body class="{{ namespace|default('page') }}">
+    {% block top %}{% endblock %}
+    {% block header %}{% endblock %}
+    <main class="content">
+      {% block content %}{% endblock %}
+    </main>
+    {% block footer %}{% endblock %}
+    {% block bottom %}{% endblock %}
     <script type="module" src="{{ sourcePath }}/main.js"></script>
   </body>
 </html>

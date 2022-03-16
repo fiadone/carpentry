@@ -1,0 +1,28 @@
+$assets: '/src/assets';
+
+$breakpoints: (
+  "sm": 768,
+  "md": 1024,
+  "lg": 1280,
+  "xl": 1440
+);
+
+$glyphs: (
+  "github": \f09b
+);
+
+:root {
+  // colors
+  --color-background-default: #FBF5F3;
+  --color-background-primary: #81A684;
+  --color-background-secondary: #EF8354;
+  --color-background-tertiary: #4F5D75;
+  --color-text-default: #39393A;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #FFFFFF;
+  --color-text-tertiary: #FFFFFF;
+  // fonts
+  --font-default: 'Montserrat', sans-serif;
+  // misc
+  --transition-duration-default: .3s;
+}

@@ -1,0 +1,17 @@
+{% set attributes = attributes|default({}) %}
+{% set tag = attributes.href ? 'a' : 'button' %}
+
+{% if tag == 'button' and not attributes.type %}
+  {% set attributes = { type: 'button' }|merge(attributes) %}
+{% endif %}
+
+<{{ tag }} {{ tag_attributes(attributes, { class: 'button' }) }}>
+  {% if icon %}
+    <span class="button__icon">
+      {% include 'components/icon/template.twig' with icon only %}
+    </span>
+  {% endif %}
+  {% if label %}
+    <span class="button__label">{{ label }}</span>
+  {% endif %}
+</{{ tag }}>

@@ -3,21 +3,21 @@
   padding: rem(12px);
   align-items: center;
   background-color: transparent;
-  border: solid 2px $tertiary;
-  border-radius: rem($radius);
+  border: solid 2px var(--color-background-tertiary);
+  border-radius: rem(4px);
   font-size: rem(12px);
   font-weight: bold;
   text-transform: uppercase;
   line-height: rem(16px);
   cursor: pointer;
   transition-property: background-color, color;
-  transition-duration: $default-duration;
+  transition-duration: var(--transition-duration-default);
   -webkit-tap-highlight-color: transparent;
 
   @media (pointer: fine) {
     &:hover {
-      background-color: $tertiary;
-      color: $white;
+      background-color: var(--color-background-tertiary);
+      color: var(--color-text-tertiary);
     }
   }
 
@@ -27,27 +27,27 @@
 }
 
 .button--primary {
-  background-color: $primary;
-  border-color: $primary;
-  color: $white;
+  background-color: var(--color-background-primary);
+  border-color: var(--color-background-primary);
+  color: var(--color-text-primary);
 
   @media (pointer: fine) {
     &:hover {
       background-color: transparent;
-      color: $primary;
+      color: var(--color-background-primary);
     }
   }
 }
 
 .button--secondary {
-  background-color: $secondary;
-  border-color: $secondary;
-  color: $white;
+  background-color: var(--color-background-secondary);
+  border-color: var(--color-background-secondary);
+  color: var(--color-text-secondary);
 
   @media (pointer: fine) {
     &:hover {
       background-color: transparent;
-      color: $secondary;
+      color: var(--color-background-secondary);
     }
   }
 }

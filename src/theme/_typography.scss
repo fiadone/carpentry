@@ -1,13 +1,13 @@
 body {
-  font-family: $default-font;
+  font-family: var(--font-default);
   font-size: 1rem;
   font-variant-ligatures: none;
-  line-height: 1;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  line-height: 1;
   text-size-adjust: none;
   text-rendering: optimizeLegibility;
-  color: $tertiary;
+  color: var(--color-text-default);
 }
 
 h1, .h1,
@@ -30,6 +30,7 @@ h6, .h6 {
 }
 
 p, .p {
+  margin-bottom: 0.25em;
   line-height: 1.5;
 }
 
@@ -46,18 +47,11 @@ small {
 }
 
 a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-.c-primary {
-  color: $primary;
-}
-
-.c-secondary {
-  color: $secondary;
+  text-decoration: none;
+  color: inherit;
 }
 
 ::selection {
-  background-color: $tertiary;
-  color: $white;
+  background-color: var(--color-background-tertiary);
+  color: var(--color-text-tertiary);
 }

@@ -5,23 +5,25 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:views": "vite build && node bin/eject-views",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@fiad/eslint-config": "^1.0.3",
+    "@fiad/stitchery": "^1.4.0",
     "@fiad/twig-addons": "^1.3.0",
     "@fullhuman/postcss-purgecss": "^4.1.3",
     "eslint": "^8.6.0",
+    "fs-extra": "^10.0.1",
+    "glob": "^7.2.0",
     "sass": "^1.45.2",
-    "vite": "^2.7.2",
-    "vite-plugin-twig": "^1.1.0"
+    "vite": "^2.8.6",
+    "vite-plugin-twig": "^1.1.1",
+    "vite-plugin-windicss": "^1.8.3",
+    "windicss": "^3.5.1"
   },
   "dependencies": {
-    "@barba/core": "^2.9.7",
-    "@fiad/stitchery": "^1.2.0",
     "@fiad/toolbox": "^2.4.1",
-    "gsap": "^3.9.1",
-    "sass-mq": "^5.0.1",
     "the-new-css-reset": "^1.4.4"
   }
 }

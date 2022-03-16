@@ -1,0 +1,19 @@
+// reset
+@import 'the-new-css-reset/css/reset';
+
+// globals
+@import 'layout';
+@import 'typography';
+
+// critical UI
+@import '../components/button';
+@import '../components/icon';
+
+// fonts
+@font-face {
+  src: url('#{$assets}/fonts/icons/icons.woff') format('woff');
+  font-family: 'icons';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

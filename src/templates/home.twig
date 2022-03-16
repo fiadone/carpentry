@@ -1,0 +1,15 @@
+{% extends 'templates/base.twig' %}
+
+{% block content %}
+  <div class="h-100vh flex items-center">
+    <div class="container text-center mb-8">
+      <img class="mx-auto mb-4" width="128" height="128" src="{{ sourcePath }}/assets/images/logo.svg" alt="@fiad/carpentry">
+      <h1>{{ title }}</h1>
+      <h2 class="h4">{{ subtitle }}</h2>
+      <p>{{ abstract|raw }}</p>
+      <div class="mt-6">
+        {% include 'components/button/template.twig' with button only %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
