@@ -1,8 +1,11 @@
-const twigAddons = require('@fiad/twig-addons')
+import twigAddons from '@fiad/twig-addons'
+import { defineConfig } from 'vite-plugin-twig'
 
-module.exports = {
-  filters: twigAddons.filters,
-  functions: twigAddons.functions,
+export default defineConfig({
+  extensions: {
+    filters: twigAddons.filters,
+    functions: twigAddons.functions
+  },
   globals: {
     publicPath: '',
     sourcePath: '/src',
@@ -11,4 +14,4 @@ module.exports = {
   settings: {
     views: 'src'
   }
-}
+})
